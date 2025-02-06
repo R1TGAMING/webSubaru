@@ -6,6 +6,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -59,9 +64,9 @@
         class="sm:flex sm:top-5 sm:right-10 opacity-0 sm:opacity-100 sm:left-25 top-10 absolute py-2 sm:py-0 sm:gap-2"
         id="listnav"
       >
-        <li class="cursor-pointer sm:mt-0 mt-4">Synopsis</li>
-        <li class="cursor-pointer sm:mt-0 mt-2">Watch</li>
-        <li class="cursor-pointer sm:mt-0 mt-2">Gallery</li>
+        <li class="cursor-pointer sm:mt-0 mt-4"><a href="#synopsis">Synopsis</a></li>
+        <li class="cursor-pointer sm:mt-0 mt-2"><a href="#watch">Watch</a></li>
+        <li class="cursor-pointer sm:mt-0 mt-2"><a href="#gallery">Gallery</a></li>
       </ul>
     </div>
 
@@ -83,12 +88,12 @@
       />
     </div>
 
-    <!-- Read section -->
+    <!-- Synopsis section -->
     <div
       class="container gap-20 mx-auto flex sm:space-x-2 sm:items-center justify-between py-20 px-5"
     >
       <div class="flex flex-col gap-6">
-        <h1 class="text-5xl font-extrabold text-shadow-slate">Synopsis</h1>
+        <h1 class="text-5xl font-extrabold text-shadow-slate" id="synopsis">Synopsis</h1>
         <p class="">
           <span class="text-orange-200">Natsuki Subaru</span> is the main
           protagonist of
@@ -109,7 +114,8 @@
       <hr class="flex-grow border-t border-slate-500" />
     </div>
 
-    <div class="">
+    <div class="p-5">
+      <h1 class="text-center font-extrabold text-5xl text-shadow-white" id="watch">Watch</h1>
       <div
         class="w-52 flex flex-col sm:flex-row gap-8 mx-auto py-10 justify-center"
       >
@@ -174,7 +180,26 @@
       <span class="px-3 text-slate-500"> ● </span>
       <hr class="flex-grow border-t border-slate-500" />
     </div>
-
+    <div class="p-5">
+      <h1 class="text-center font-extrabold text-5xl text-shadow-white" id="gallery">Gallery</h1>
+      <swiper-container
+        class="mySwiper p-6 rounded-lg md:w-[100vh]"
+        pagination="true"
+        pagination-clickable="true"
+        navigation="true"
+        space-between="30"
+        centered-slides="true"
+        autoplay-delay="2500"
+        autoplay-disable-on-interaction="false"
+        
+      >
+        <swiper-slide><img src="images/gallery1.webp" /></swiper-slide>
+        <swiper-slide><img src="images/gallery2.webp" alt="" /></swiper-slide>
+        <swiper-slide><img src="images/gallery3.webp" alt="" /></swiper-slide>
+        <swiper-slide><img src="images/gallery4.webp" alt="" /></swiper-slide>
+        <swiper-slide><img src="images/gallery5.webp" alt="" /></swiper-slide>
+      </swiper-container>
+    </div>
 
     <div class="flex items-center px-5 mt-5">
       <hr class="flex-grow border-t border-slate-500" />
@@ -211,8 +236,10 @@
       </div>
     </div>
 
-    <footer class="text-center text-[10px] text-slate-500">
+    <footer class="text-center text-[10px] mt-16 text-slate-500">
       By Ipii a.k.a Rafi
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
   </body>
 </html>

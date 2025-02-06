@@ -16,7 +16,6 @@ body {
   text-shadow: 0px 0px 8px rgb(148, 163, 184);
 }
 
-
 .shadow-top {
   box-shadow: 1px -26px 5px 2px rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 1px -26px 5px 2px rgba(0, 0, 0, 0.3);
@@ -37,3 +36,44 @@ body {
   mask-image: linear-gradient(black, transparent);
 }
 
+.wrapper {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.animation-slide {
+  animation: slide 12s infinite;
+}
+
+.swiper {
+  width: 80%;
+  height: 300px;
+}
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: #ccc;
+}
+
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
